@@ -7,14 +7,14 @@ package `in`.aayushgoyal
  * @version 0.1.0
  * @author Aayush Goyal
  * @created 2024-02-13
- * @modifier
- * @modified
+ * @modifier Aayush Goyal
+ * @modified 2024-02-13
  */
 fun main() {
     // Take input from the user.
     println("Enter the numbers of the array.")
     val inputAsString = readlnOrNull()
-    val inputArrayAsString = inputAsString?.split(" ")
+    val inputArrayAsString = inputAsString?.split(", ")
     var inputArray: Array<Int> = arrayOf()
     println("Enter the number to search.")
     val searchNumber = readlnOrNull()?.toInt()
