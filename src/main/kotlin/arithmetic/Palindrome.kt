@@ -39,5 +39,6 @@ fun isPalindrome(x: Int): Boolean {
             break
         }
     }
+
     return isNumberPalindrome
 }
