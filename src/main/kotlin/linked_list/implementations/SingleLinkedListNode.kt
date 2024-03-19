@@ -1,4 +1,4 @@
-package `in`.aayushgoyal.linked_list
+package `in`.aayushgoyal.linked_list.implementations
 
 /**
  * This class is an implementation of a single Node in non-circular, single LinkedList Data Structure.
@@ -10,4 +10,5 @@ package `in`.aayushgoyal.linked_list
  * @modifier
  * @modified
  */
-class SingleLinkedListNode<T>(override val value: T, override var prevNode: Node<T>? = null, override var nextNode: Node<T>?) : Node<T>
+class SingleLinkedListNode<T>(override val value: T, override var prevNode: Node<T>? = null, override var nextNode: Node<T>?) :
+    Node<T>

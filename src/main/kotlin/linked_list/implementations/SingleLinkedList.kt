@@ -1,6 +1,4 @@
-package `in`.aayushgoyal.linked_list
-
-//import `in`.aayushgoyal.linked_list.SingleLinkedListNode
+package `in`.aayushgoyal.linked_list.implementations
 
 /**
  * This class is an implementation of a non-circular, single LinkedList Data Structure.
@@ -34,12 +32,12 @@ class SingleLinkedList<T>(override var head: Node<T>?): LinkedList<T> {
      */
     override fun popFront() {
         if (isEmpty()) {
-            print("The list is already empty.")
+            println("The list is already empty.")
         } else if (head!!.nextNode != null) {
-            print("The element with the value ${head!!.value} has been removed.")
+            println("The element with the value ${head!!.value} has been removed.")
             head = head!!.nextNode
         } else {
-            print("The element with the value ${head!!.value} has been removed.")
+            println("The element with the value ${head!!.value} has been removed.")
             head = null
         }
     }
@@ -62,7 +60,7 @@ class SingleLinkedList<T>(override var head: Node<T>?): LinkedList<T> {
             }
             currentNode.nextNode = node
         }
-        print("The element has been added to the end of the list.")
+        println("The element has been added to the end of the list.")
     }
 
     /**
@@ -89,7 +87,7 @@ class SingleLinkedList<T>(override var head: Node<T>?): LinkedList<T> {
      */
     override fun popBack() {
         if (isEmpty()) {
-            print("The list is already empty.")
+            println("The list is already empty.")
         } else if(head!!.nextNode == null) {
             head = null
         } else {
@@ -101,31 +99,7 @@ class SingleLinkedList<T>(override var head: Node<T>?): LinkedList<T> {
             }
             previousNode!!.nextNode = null
         }
-        print("The element has been removed from the end of the list.")
-    }
-
-    /**
-     * Finds a particular value in any node of the list.
-     *
-     * @param findValue The value to be searched in the list.
-     * @return If the value is present at any node, it will return true, else false.
-     */
-    override fun find(findValue: T): Boolean {
-        if (isEmpty()) {
-             return false
-        } else if (head!!.nextNode == null) {
-            if (head!!.value == findValue) return true
-        } else {
-            var currentNode = head
-            while (currentNode!!.nextNode != null) {
-                if (currentNode.value == findValue) {
-                    return true
-                }
-                currentNode = currentNode.nextNode
-            }
-        }
-
-        return false
+        println("The element has been removed from the end of the list.")
     }
 
     /**
@@ -135,11 +109,11 @@ class SingleLinkedList<T>(override var head: Node<T>?): LinkedList<T> {
      */
     override fun erase(eraseValue: T) {
         if (isEmpty()) {
-            print("The list if empty.")
+            println("The list if empty.")
         } else if (head!!.nextNode == null) {
             if (head!!.value == eraseValue) {
                 head = null
-                print("The element with the value $eraseValue has been removed from the list.")
+                println("The element with the value $eraseValue has been removed from the list.")
             }
         } else if (head!!.value == eraseValue) {
             head = head!!.nextNode
@@ -149,7 +123,7 @@ class SingleLinkedList<T>(override var head: Node<T>?): LinkedList<T> {
             while (currentNode!!.nextNode != null) {
                 if (currentNode.value == eraseValue) {
                     previousNode!!.nextNode = currentNode.nextNode
-                    print("The element with the value $eraseValue has been removed from the list.")
+                    println("The element with the value $eraseValue has been removed from the list.")
                     return
                 }
                 previousNode = currentNode

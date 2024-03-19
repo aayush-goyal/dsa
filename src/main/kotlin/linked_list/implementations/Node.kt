@@ -1,4 +1,4 @@
-package `in`.aayushgoyal.linked_list
+package `in`.aayushgoyal.linked_list.implementations
 
 /**
  * This interface is a general representation of a single Node in any type of LinkedList Data Structure.

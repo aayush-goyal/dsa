@@ -1,4 +1,4 @@
-package `in`.aayushgoyal.linked_list
+package `in`.aayushgoyal.linked_list.implementations
 
 /**
  * This interface is a general representation of a LinkedList Data Structure.
@@ -63,7 +63,24 @@ interface LinkedList<T> {
      * @param findValue The value to be searched in the list.
      * @return If the value is present at any node, it will return true, else false.
      */
-    fun find(findValue: T): Boolean
+    fun find(findValue: T): Boolean {
+        if (isEmpty()) {
+            return false
+        } else if (head!!.nextNode == null
+            && head!!.value == findValue) {
+            return true
+        } else {
+            var currentNode = head
+            while (currentNode!!.nextNode != null) {
+                if (currentNode.value == findValue) {
+                    return true
+                }
+                currentNode = currentNode.nextNode
+            }
+        }
+
+        return false
+    }
 
     /**
      * Remove a key from the list.
