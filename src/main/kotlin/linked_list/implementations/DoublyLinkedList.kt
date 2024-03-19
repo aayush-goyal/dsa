@@ -1,7 +1,7 @@
 package `in`.aayushgoyal.linked_list.implementations
 
 /**
- * This class is an implementation of a non-circular, single LinkedList Data Structure.
+ * This class is an implementation of a non-circular, doubly LinkedList Data Structure.
  * Read more here: https://www.geeksforgeeks.org/introduction-and-insertion-in-a-doubly-linked-list/
  *
  * @version 0.1.0
