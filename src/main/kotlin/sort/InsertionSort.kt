@@ -26,7 +26,7 @@ fun main() {
     for (index in 1..<inputArray.size) {
         /**
          * Assuming the array is sorted til (index - 1), we will check each element from right to left from index - 1 to 0 and
-         * check the right place of the current index. When we find it, we will simple insert it into its right position.
+         * check the right place of the current index. When we find it, we will simply insert it into its right position.
          */
         for (subIndex in (index - 1) downTo 0) {
             val currentNumber = inputArray[subIndex + 1]
